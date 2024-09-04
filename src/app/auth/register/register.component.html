@@ -1,11 +1,11 @@
 <form
   [formGroup]="form"
   (ngSubmit)="onSubmit()"
-  class="flex flex-col justify-center items-center min-h-screen bg-sky-50"
+  class="flex flex-col justify-center items-center bg-sky-50 mobile:py-4 px-4"
 >
   <div class="font-medium text-4xl pb-4 text-blue-800">Register Now!</div>
-  <div class="grid grid-cols-2 gap-4 border-2 p-4 rounded-md w-1/2">
-    <mat-form-field class="example-form-field w-ful">
+  <div class="grid desktop:grid-cols-2 desktop:gap-4 rounded-md w-full">
+    <mat-form-field appearance="outline" class="w-ful">
       <mat-label>Parent Name</mat-label>
       <input matInput type="text" formControlName="parentName" />
       @if (parentName) {
@@ -14,16 +14,7 @@
       </button>
       }
     </mat-form-field>
-    <mat-form-field class="example-form-field w-ful">
-      <mat-label>Parent Name</mat-label>
-      <input matInput type="text" formControlName="parentName" />
-      @if (parentName) {
-      <button matSuffix mat-icon-button aria-label="Clear">
-        <mat-icon>close</mat-icon>
-      </button>
-      }
-    </mat-form-field>
-    <mat-form-field class="example-form-field">
+    <mat-form-field appearance="outline" class="w-ful">
       <mat-label>Age</mat-label>
       <input matInput type="text" formControlName="age" />
       @if (age) {
@@ -32,7 +23,7 @@
       </button>
       }
     </mat-form-field>
-    <mat-form-field class="example-form-field">
+    <mat-form-field appearance="outline" class="w-ful">
       <mat-label>Email</mat-label>
       <input matInput type="text" formControlName="email" />
       @if (email) {
@@ -41,7 +32,7 @@
       </button>
       }
     </mat-form-field>
-    <mat-form-field class="example-form-field">
+    <mat-form-field appearance="outline" class="w-ful">
       <mat-label>School</mat-label>
       <input matInput type="text" formControlName="school" />
       @if (school) {
@@ -50,7 +41,7 @@
       </button>
       }
     </mat-form-field>
-    <mat-form-field class="example-form-field">
+    <mat-form-field appearance="outline" class="w-ful">
       <mat-label>Name</mat-label>
       <input matInput type="text" formControlName="name" />
       @if (name) {
@@ -59,7 +50,7 @@
       </button>
       }
     </mat-form-field>
-    <mat-form-field class="example-form-field">
+    <mat-form-field appearance="outline" class="w-ful">
       <mat-label>Contact Number</mat-label>
       <input matInput type="text" formControlName="contactNumber" />
       @if (contactNumber) {
@@ -68,7 +59,7 @@
       </button>
       }
     </mat-form-field>
-    <mat-form-field class="example-form-field">
+    <mat-form-field appearance="outline" class="w-ful">
       <mat-label>Parent Email</mat-label>
       <input matInput type="text" formControlName="parentEmail" />
       @if (parentEmail) {
@@ -77,12 +68,17 @@
       </button>
       }
     </mat-form-field>
+    <mat-checkbox formControlName="pepperoni">
+      <span class="text-sm text-gray-600 opacity-45">
+        All the Lorem Ipsum generators on the Internet
+      </span>
+    </mat-checkbox>
   </div>
-  <!-- <div
-    class="flex items-center justify-center flex-wrap flex-col-2 gap-4 "
-  >
-   
- 
 
-  </div> -->
+  <button class="btn-submit flex items-center rounded-full w-60 ">
+    <span>
+      <img src="../../../assets/images/btn-register.png" alt="" />
+    </span>
+    <span class="m-auto text-base font-medium">SUBMIT APPLICATION</span>
+  </button>
 </form>

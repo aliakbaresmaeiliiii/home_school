@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 @Component({
   selector: 'app-register',
   standalone: true,
@@ -15,6 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     MatIconModule,
     MatFormFieldModule,
+    MatCheckboxModule,
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
@@ -25,13 +27,14 @@ export class RegisterComponent {
   ClearParentName = '';
 
   form = this.fb.group({
-    parentName: ['', Validators.required],
-    age: ['', Validators.required],
-    email: ['', Validators.required],
-    school: ['', Validators.required],
-    name: ['', Validators.required],
-    contactNumber: ['', Validators.required],
-    parentEmail: ['', Validators.required],
+    parentName: [''],
+    age: [''],
+    email: [''],
+    school: [''],
+    name: [''],
+    contactNumber: [''],
+    parentEmail: [''],
+    pepperoni: [''],
   });
 
   onSubmit() {}
